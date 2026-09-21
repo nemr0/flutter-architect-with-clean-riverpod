@@ -66,16 +66,31 @@ ignored.
 
 ## Install
 
-Both skills must sit side by side: `edit-flutter-proj` calls
-`create-flutter-proj/scaffold.sh`.
+Install both skills for your user with the [`skills`](https://www.npmjs.com/package/skills) CLI:
 
 ```bash
-git clone https://github.com/nemr0/flutter-architect-with-clean-riverpod.git
-cp -R flutter-architect-with-clean-riverpod/skills/* ~/.claude/skills/
+npx skills add nemr0/flutter-architect-with-clean-riverpod -g -a claude-code -s '*' -y
 ```
 
 Then, in Claude Code: `/create-flutter-proj` for a new app, or
 `/edit-flutter-proj` inside an existing one.
+
+Update to the latest version:
+
+```bash
+npx skills update -g -y
+```
+
+Remove:
+
+```bash
+npx skills remove -g create-flutter-proj edit-flutter-proj -y
+```
+
+Install both skills, not just one: `edit-flutter-proj` calls
+`create-flutter-proj/scaffold.sh` from the sibling directory. For other
+agents, change `-a claude-code` (or pass `-a '*'`). Drop `-g` to install into
+the current project instead.
 
 ## Requirements
 

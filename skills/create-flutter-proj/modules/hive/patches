@@ -1,0 +1,6 @@
+@@ lib/main.dart @imports
+import 'package:hive_ce_flutter/hive_ce_flutter.dart';
+import 'package:__APP__/data/data_sources/local_data_source/preference_source/hive/hive_registrar.g.dart';
+@@ lib/main.dart @bootstrap
+  await Hive.initFlutter();
+  Hive.registerAdapters();

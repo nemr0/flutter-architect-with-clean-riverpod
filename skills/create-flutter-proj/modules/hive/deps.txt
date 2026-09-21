@@ -1,0 +1,3 @@
+hive_ce:^2.19.3
+hive_ce_flutter:^2.3.4
+dev:hive_ce_generator:1.11.0

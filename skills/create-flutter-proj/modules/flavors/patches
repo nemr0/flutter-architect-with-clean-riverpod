@@ -1,0 +1,19 @@
+@@ .gitignore +
+
+# per-flavor secrets (copy from .env.example)
+.env.dev
+.env.staging
+.env.prod
+@@ lib/app.dart @imports
+import 'package:__APP__/flavors/environments.dart';
+@@ lib/app.dart @title!
+      title: Environment.instance.title,
+@@ lib/app.dart @app-builder
+        if (!Environment.instance.isProd) {
+          app = Banner(
+            location: BannerLocation.topStart,
+            message: Environment.instance.name,
+            color: Colors.green.withAlpha(150),
+            child: app,
+          );
+        }

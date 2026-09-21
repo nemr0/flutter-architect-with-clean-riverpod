@@ -1,0 +1,48 @@
+# __APP_TITLE__ — project memory
+
+> Maintained by Claude. A Stop hook (`.claude/hooks/memory-check.sh`) blocks the
+> session from ending when `lib/`, `test/`, `assets/` or `pubspec.yaml` changed
+> after this file did. Update the section that changed; keep the whole file
+> under ~150 lines — facts a future session needs, not a changelog.
+
+Last synced: __DATE__
+
+## What this app is
+
+TODO — one paragraph: who uses it, what it does, backend it talks to.
+
+## Architecture
+
+clean-riverpod architecture. **Before any change,
+load the `edit-flutter-proj` skill** — it has the layer rules, file layout,
+and the verify command. Those rules win over the generic dart/flutter skills
+in `.claude/skills/` (e.g. use auto_route not go_router, slang not gen-l10n,
+dio/retrofit not `http`, riverpod_generator not hand-written providers).
+
+- Package: `__APP__`
+- Modules installed: __MODULES__ (list: `.claude/modules.txt`; add more with `/edit-flutter-proj add <module>`)
+- Verify: `bash .claude/verify.sh`
+
+## Features
+
+| Feature | Screens (route) | View models | Repository / service |
+|---|---|---|---|
+| home | `HomeScreen` (`/`) | `HomeVm` | `GreetingRepository` — sample, replace |
+
+## Data sources
+
+Endpoints, cache boxes, secure-storage keys, third-party SDKs — one line each.
+
+- (none yet)
+
+## Decisions
+
+Why something is the way it is, when it isn't obvious from the code.
+
+- (none yet)
+
+## Gotchas
+
+Traps hit in this project. Symptom → fix.
+
+- (none yet)

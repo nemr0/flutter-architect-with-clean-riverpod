@@ -1,0 +1,1 @@
+Auth session — token in secure storage, bearer + single-flight refresh interceptor, force-logout event (needs network, storage)

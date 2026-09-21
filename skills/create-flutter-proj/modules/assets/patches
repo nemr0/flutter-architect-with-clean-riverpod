@@ -1,0 +1,11 @@
+@@ pubspec.yaml @flutter-section
+  assets:
+    - assets/icons/
+    - assets/images/
+@@ pubspec.yaml +
+
+flutter_gen:
+  output: lib/presentation/core/gen
+  integrations:
+    flutter_svg: true
+    lottie: true

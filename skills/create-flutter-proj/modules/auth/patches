@@ -1,0 +1,10 @@
+@@ lib/data/data_sources/remote_data_source/api_source/providers/app_dio.dart @imports
+import 'package:__APP__/data/data_sources/remote_data_source/api_source/interceptors/authorization_interceptor.dart';
+@@ lib/data/data_sources/remote_data_source/api_source/providers/app_dio.dart @interceptors
+      ref.read(authorizationInterceptorProvider),
+@@ lib/data/data_sources/local_data_source/preference_source/storage/util/shared_pref_keys.dart @keys
+  static const String token = 'token';
+@@ lib/app.dart @imports
+import 'package:__APP__/presentation/core/helpers/session_redirect.dart';
+@@ lib/app.dart @app-build
+    appRouter.useSessionForceRedirection();

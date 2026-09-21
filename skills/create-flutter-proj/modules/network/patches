@@ -1,0 +1,5 @@
+@@ lib/data/util/error/app_error.dart @error-mappers
+    if (error is DioException) return appErrorFromDio(error, trace);
+@@ lib/data/util/error/app_error.dart @imports
+import 'package:dio/dio.dart';
+import 'package:__APP__/data/util/error/dio_error_mapper.dart';

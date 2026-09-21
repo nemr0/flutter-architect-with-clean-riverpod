@@ -1,0 +1,2 @@
+ispect:^6.1.7
+ispectify_dio:^6.1.7

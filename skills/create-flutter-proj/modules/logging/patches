@@ -1,0 +1,28 @@
+@@ lib/main.dart @imports
+import 'package:ispect/ispect.dart';
+import 'package:__APP__/presentation/core/observers/ispect_riverpod_observer.dart';
+@@ lib/main.dart @run!
+// The inspector is compiled in only with --dart-define=ISPECT_ENABLED=true
+// (the flavors Makefile passes it for non-prod); otherwise it tree-shakes out.
+void main() => ISpect.run(
+  _bootstrap,
+  logger: ISpectFlutter.init(
+    options: ISpectLoggerOptions(enabled: kISpectEnabled),
+  ),
+  redactionEnabled: !kISpectEnabled,
+);
+@@ lib/main.dart @observers
+        if (kISpectEnabled) const ISpectRiverpodObserver(),
+@@ lib/app.dart @imports
+import 'package:ispect/ispect.dart';
+@@ lib/app.dart @delegates
+        if (kISpectEnabled) ...ISpectLocalizations.delegate(),
+@@ lib/app.dart @router-config
+        navigatorObservers: () => ISpectNavigatorObserver.observers(),
+@@ lib/app.dart @app-builder
+        app = ISpectBuilder.wrap(child: app);
+@@? lib/data/data_sources/remote_data_source/api_source/providers/app_dio.dart @imports
+import 'package:ispect/ispect.dart';
+import 'package:ispectify_dio/ispectify_dio.dart';
+@@? lib/data/data_sources/remote_data_source/api_source/providers/app_dio.dart @interceptors
+      if (kISpectEnabled) ISpectDioInterceptor(logger: ISpect.logger),

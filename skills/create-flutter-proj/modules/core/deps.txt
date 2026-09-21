@@ -1,0 +1,18 @@
+# Pinned to a set known to co-resolve. riverpod_generator, freezed and
+# auto_route_generator each pin a narrow `analyzer` range — bump them together.
+flutter_localizations:{"sdk":"flutter"}
+hooks_riverpod:^3.3.1
+riverpod_annotation:4.0.2
+flutter_hooks:^0.21.3+1
+freezed_annotation:^3.1.0
+json_annotation:^4.11.0
+auto_route:^11.1.0
+slang:^4.14.0
+slang_flutter:^4.14.0
+dev:build_runner:^2.13.1
+dev:freezed:^3.2.5
+dev:json_serializable:^6.13.0
+dev:riverpod_generator:4.0.3
+dev:auto_route_generator:10.4.0
+dev:slang_build_runner:^4.14.0
+dev:mocktail:^1.0.5
